@@ -51,16 +51,14 @@ public class Sort {
 
   public class InsertSort {
     public void sort(int[] list) {
-      int[] sorted = new int[list.length];
-      sorted[0] = list[0];
       for(int i = 1; i < list.length; i++) {
         int current = list[i];
         int j = i - 1;
-        while(j >= 0 && sorted[j] > current) {
-          sorted[j + 1] = sorted[j];
+        while(j >= 0 && list[j] > current) {
+          list[j + 1] = list[j];
           j--;
         }
-        sorted[j + 1] = current;
+        list[j + 1] = current;
       }
     }
 
